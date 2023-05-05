@@ -1,0 +1,33 @@
+{
+    "name": "SOC_2_Type_2",
+    "type": "Microsoft.Authorization/policyAssignments",
+    "apiVersion": "2019-09-01",
+    "properties": {
+        "description": "A System and Organization Controls (SOC) 2 is a report based on the Trust Service Principles and Criteria established by the American Institute of Certified Public Accountants (AICPA). The Report evaluates an organization's information system relevant to the following principles: security, availability, processing integrity, confidentiality and privacy. These policies address a subset of SOC 2 Type 2 controls. For more information, visit https://docs.microsoft.com/azure/compliance/offerings/offering-soc-2",
+        "displayName": "SOC 2 Type 2",
+        "notScopes": [],
+        "parameters": {
+          "allowedContainerImagesRegex-febd0533-8e55-448f-b837-bd0e06f16469": {
+            "value": "^[^\\/]+\\.azurecr\\.io\\/.+$"
+          },
+          "cpuLimit-e345eecc-fa47-480f-9e88-67dcc122b164": {
+            "value": "1"
+          },
+          "memoryLimit-e345eecc-fa47-480f-9e88-67dcc122b164": {
+            "value": "1"
+          }
+        },
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/4054785f-702b-4a98-9215-009cbd58b141",
+        "nonComplianceMessages": [
+          {
+            "message": "SOC 2 Type 2 controls {enforcementMode} be enforced"
+          }
+        ],
+        "scope": "${current_scope_resource_id}",
+        "enforcementMode": null
+    },
+    "location": "${default_location}",
+    "identity": {
+        "type": "SystemAssigned"
+    }
+}
